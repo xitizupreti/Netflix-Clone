@@ -10,7 +10,7 @@ function nf(val) {
       imgsrc={val.imgsrc}
       title={val.title}
       sname={val.sname}
-      link={val.imgsrc}
+      link={val.link}
     />
   );
 }
