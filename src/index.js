@@ -4,22 +4,22 @@ import Card from "./Cards";
 import "./index.css";
 import data from "./Data.jsx";
 
-function nf(val) {
-  return (
-    <Card
-      imgsrc={val.imgsrc}
-      title={val.title}
-      sname={val.sname}
-      link={val.link}
-    />
-  );
-}
-
 ReactDOM.render(
   <>
     <h1 className="heading_style">List of my Best Netflix Series Till Now!</h1>
-    {data.map(nf)};
-    <footer></footer>
+   <div>
+   {data.map((val) => {
+      return (
+        <Card
+          imgsrc={val.imgsrc}
+          title={val.title}
+          sname={val.sname}
+          link={val.link}
+        />
+      );
+   })
+   };
+   </div>
   </>,
   document.getElementById("root")
 );
